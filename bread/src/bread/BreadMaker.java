@@ -1,5 +1,9 @@
 package bread;
-
+/**
+ * 메인함수가 존재하는 클래스
+ * @author 김영제
+ *
+ */
 public class BreadMaker {
 
 	public static void main(String[] args) {
@@ -11,7 +15,6 @@ public class BreadMaker {
 		breadPrint(typeBreadFactory.createBread("butter"));
 		
 	}
-	
 	public static void breadPrint(Bread bread) {
 		System.out.println("BreadType: "+bread.getBreadType());
 		System.out.println("recipe");

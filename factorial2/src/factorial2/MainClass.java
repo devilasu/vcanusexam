@@ -6,18 +6,18 @@ public class MainClass {
 		// TODO Auto-generated method stub
 		System.out.println(factorial(10000000));
 	}
-	
+	//while문을 사용하여 stack overflow 해결.
 	public static int factorial(int i) {
 		int result = 1;
 		
 		while(true) {
-			if(i<=1) return result;
+			if(i==1) return result;
 			result*=i;
 			i-=1;
 		}
 	}
 
-//	자바에서는 허용 안되는 방법.
+//	자바에서는 허용 안되는 방법. 꼬리재귀메소드
 //	public static int factorial(int i, int result) {
 //		if(i==1) return result;
 //		return factorial(i-1,result*i);
