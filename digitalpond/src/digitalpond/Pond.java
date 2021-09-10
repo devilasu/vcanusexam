@@ -63,13 +63,17 @@ public class Pond {//맵 데이터를 제어하기 위한 클래스
 	
 	public void printMap() {//맵을 출력하는 기능
 		String txt = "";
+		int sum = 0;
 		for(int i = 0; i<map.length;i++) {
 			txt = "";
 			for(int j = 0 ; j<map[i].length;j++) {
 				txt += map[i][j]+" ";
+				if(map[i][j]!=0)
+					sum += map[i][j];
 			}
 			System.out.println(txt);
 		}
+		System.out.println(sum);
 	}
 	
 	
