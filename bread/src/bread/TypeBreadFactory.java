@@ -5,17 +5,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TypeBreadFactory {
-	Map<String, Bread> breads = new HashMap<String,Bread>();
-//	public TypeBreadFactory() {
-//		breads.put("Cream", new CreamBread());
-//		breads.put("Butter", new ButterBread());
-//		breads.put("Sugar", new SugarBread());
-//	}
+	Map<String, Constructor<?>> breads = new HashMap<String,Constructor<?>>();
+	public TypeBreadFactory() throws Exception{
+		breads.put("Cream", CreamBread.class.getConstructor());
+		breads.put("Butter", ButterBread.class.getConstructor());
+		breads.put("Sugar", SugarBread.class.getConstructor());
+	}
 	public Bread createBread(String type) throws Exception {
-		Class<?> tClass = Class.forName("bread."+type+"Bread");
-		Constructor<?> cs = tClass.getConstructor();
-		Bread creamBread = (Bread) cs.newInstance();
-		//이미 만들어진 동일한 Bread가 리턴된다. (수정 필요.)
-		return creamBread;
+		
+		return (Bread) breads.get(type).newInstance();
+//		java reflection을 이용한 방법. 
+//		Class<?> tClass = Class.forName("bread."+type+"Bread");
+//		Constructor<?> cs = tClass.getConstructor();
+//		Bread creamBread = (Bread) cs.newInstance();
+//		return creamBread;
 	}
 }
