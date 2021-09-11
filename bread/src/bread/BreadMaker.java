@@ -6,13 +6,13 @@ package bread;
  */
 public class BreadMaker {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		TypeBreadFactory typeBreadFactory = new TypeBreadFactory();
 		
-		breadPrint(typeBreadFactory.createBread("cream"));
-		breadPrint(typeBreadFactory.createBread("sugar"));
-		breadPrint(typeBreadFactory.createBread("butter"));
+		breadPrint(typeBreadFactory.createBread("Cream"));
+		breadPrint(typeBreadFactory.createBread("Sugar"));
+		breadPrint(typeBreadFactory.createBread("Butter"));
 	}
 	public static void breadPrint(Bread bread) {
 		System.out.println("BreadType: "+bread.getBreadType());
