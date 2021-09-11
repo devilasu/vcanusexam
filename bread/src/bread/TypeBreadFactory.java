@@ -11,6 +11,7 @@ public class TypeBreadFactory {
 		breads.put("sugar", new SugarBread());
 	}
 	public Bread createBread(String type) {
+		//이미 만들어진 동일한 Bread가 리턴된다. (수정 필요.)
 		return breads.get(type);
 	}
 }
