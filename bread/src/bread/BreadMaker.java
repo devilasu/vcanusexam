@@ -13,7 +13,6 @@ public class BreadMaker {
 		breadPrint(typeBreadFactory.createBread("cream"));
 		breadPrint(typeBreadFactory.createBread("sugar"));
 		breadPrint(typeBreadFactory.createBread("butter"));
-		
 	}
 	public static void breadPrint(Bread bread) {
 		System.out.println("BreadType: "+bread.getBreadType());
