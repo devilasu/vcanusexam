@@ -20,3 +20,5 @@
 ---
 
 > ### 3. 클래스를 넣어 놓고 만들때 생성을 해준다?(되나?)
+>> #### (Bread) breads.get(type).getConstructor().newInstance(); 로 사용 가능하다.(forClass()와 차이점.. 각 방식의 차이점이 무엇일까?)
+>> #### 만약 forClass() 가 클래스 중에서 탐색하여 결과를 나타낸다면 map을 사용하는 방식이 더 낫지 않을까?
