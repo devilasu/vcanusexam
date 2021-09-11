@@ -53,7 +53,7 @@ public class Pond {//맵 데이터를 제어하기 위한 클래스
 		}
 		return false;
 	}
-	
+
 	public void printMap() {//맵을 출력하는 기능
 		String txt = "";
 		int sum = 0;
